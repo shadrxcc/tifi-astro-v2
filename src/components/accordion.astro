@@ -1,0 +1,60 @@
+---
+import close from "../assets/accordion-close.png";
+import open from "../assets/accordion-open.png";
+
+interface Props {
+  question: string;
+  answer: string;
+}
+
+const { question, answer } = Astro.props;
+---
+
+<div
+  class="p-6 bg-[#F2F4F7] accordion gap-y-5 flex flex-col justify-between rounded-lg"
+>
+  <div class="flex items-center">
+    <h3 class="text-[22px] font-sans font-bold" data-toggle="accordion">
+      {question}
+    </h3>
+
+    <img
+      src={open.src}
+      id="open"
+      data-toggle="accordion"
+      class="w-[40px]"
+      alt=""
+    />
+    <img
+      src={close.src}
+      id="close"
+      data-toggle="accordion"
+      class="w-[40px] hidden"
+      alt=""
+    />
+  </div>
+
+  <div class="flex gap-y-4 flex-col">
+    <p id="answer" class="hidden">
+      {answer}
+    </p>
+  </div>
+</div>
+
+<script>
+  const open = document.getElementById("open");
+  const answer = document.getElementById("answer");
+  const close = document.getElementById("close");
+
+  open.addEventListener("click", () => {
+    open.style.display = "none";
+    answer.style.display = "block";
+    close.style.display = "block";
+  });
+
+  close.addEventListener("click", () => {
+    close.style.display = "none";
+    answer.style.display = "none";
+    open.style.display = "block";
+  });
+</script>
