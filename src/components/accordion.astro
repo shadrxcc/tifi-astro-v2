@@ -10,10 +10,10 @@ interface Props {
 const { question, answer } = Astro.props;
 ---
 
-<div
-  class="p-6 bg-[#F2F4F7] font-sans accordion gap-y-5 flex flex-col justify-between rounded-lg"
+<details
+  class="p-6 bg-[#F2F4F7] font-sans accordion gap-y-5 flex flex-col justify-between rounded-lg group"
 >
-  <div class="flex items-center">
+  <summary class="flex items-center justify-between gap-8">
     <h3 class="text-[22px] font-sans font-bold" data-toggle="accordion">
       {question}
     </h3>
@@ -22,26 +22,26 @@ const { question, answer } = Astro.props;
       src={open.src}
       id="open"
       data-toggle="accordion"
-      class="w-[40px]"
+      class="w-[40px] group-open:hidden"
       alt=""
     />
     <img
       src={close.src}
       id="close"
       data-toggle="accordion"
-      class="w-[40px] hidden"
+      class="w-[40px] hidden group-open:block"
       alt=""
     />
-  </div>
+  </summary>
 
   <div class="flex gap-y-4 flex-col">
-    <p id="answer" class="hidden">
+    <p id="answer">
       {answer}
     </p>
   </div>
-</div>
+</details>
 
-<script>
+<!-- <script>
   const open = document.getElementById("open");
   const answer = document.getElementById("answer");
   const close = document.getElementById("close");
@@ -57,4 +57,4 @@ const { question, answer } = Astro.props;
     answer.style.display = "none";
     open.style.display = "block";
   });
-</script>
+</script> -->
