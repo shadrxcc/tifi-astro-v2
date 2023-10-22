@@ -2,6 +2,9 @@
 import special1 from "../../assets/special-1.png";
 import special2 from "../../assets/special-2.png";
 import special3 from "../../assets/special-3.png";
+import specialmob1 from "../../assets/specialmobile-1.svg";
+import specialmob2 from "../../assets/specialmobile-2.svg";
+import specialmob3 from "../../assets/specialmobile-3.svg";
 import arrow from "../../assets/black-arrow.png";
 ---
 
@@ -11,7 +14,7 @@ import arrow from "../../assets/black-arrow.png";
   </h1>
 
   <div class="flex flex-col items-center gap-y-12">
-    <div class="flex flex-col lg:flex-row lg:items-center gap-12 justify-center">
+    <div class="flex flex-col lg:flex-row lg:items-center gap-y-4 gap-x-12 justify-center">
       <div class="flex flex-col gap-y-4 flex-1">
         <span class="text-[#D0D5DD] font-bold text-[54px]">01</span>
 
@@ -27,11 +30,12 @@ import arrow from "../../assets/black-arrow.png";
       </div>
 
       <div class="flex-1">
-        <img src={special1.src}  class="w-full h-[20rem] lg:h-full object-fit" alt="" />
+        <img src={special1.src}  class="w-full hidden sm:block" alt="" />
+        <img src={specialmob1.src}  class="w-full block sm:hidden" alt="" />
       </div>
     </div>
 
-    <div class="flex flex-col lg:flex-row lg:items-center gap-12 justify-center">
+    <div class="flex flex-col lg:flex-row lg:items-center gap-y-4 gap-x-12 justify-center">
       <div class="flex flex-col gap-y-4 flex-1">
         <span class="text-[#D0D5DD] font-bold text-[54px]">02</span>
 
@@ -47,11 +51,12 @@ import arrow from "../../assets/black-arrow.png";
       </div>
 
       <div class="flex-1">
-        <img src={special2.src} class="w-full h-[20rem] lg:h-full object-fit" alt="" />
+        <img src={special2.src}  class="w-full hidden sm:block" alt="" />
+        <img src={specialmob2.src}  class="w-full block sm:hidden" alt="" />
       </div>
     </div>
 
-    <div class="flex flex-col lg:flex-row lg:items-center gap-12 justify-center">
+    <div class="flex flex-col lg:flex-row lg:items-center gap-y-4 gap-x-12 justify-center">
       <div class="flex flex-col gap-y-4 flex-1">
         <span class="text-[#D0D5DD] font-bold text-[54px]">03</span>
 
@@ -67,7 +72,8 @@ import arrow from "../../assets/black-arrow.png";
       </div>
 
       <div class="flex-1">
-        <img src={special3.src} class="w-full h-[20rem] lg:h-full object-fit" alt="" />
+        <img src={special3.src}  class="w-full hidden sm:block" alt="" />
+        <img src={specialmob3.src}  class="w-full block sm:hidden" alt="" />
       </div>
     </div>
   </div>
