@@ -11,13 +11,13 @@ const { image, title, desc } = Astro.props;
 <div class="font-sans">
   <img src={image} class="w-full rounded-t-lg" alt="" />
 
-  <div class="bg-[#101828] rounded-b-lg p-6">
+  <div class="bg-[#101828] flex flex-col gap-6 rounded-b-lg p-4">
     <div>
-      <div class="flex text-sm text-[#98A2B3] items-center">
-        <p>October 12, 2023</p>
-        <hr class="h-[15px]" />
-        <p>8 mins</p>
-        <hr class="h-[15px]" />
+      <div class="flex gap-x-2 text-sm text-[#98A2B3] items-center">
+        <p class="border-r pr-2">October 12, 2023</p>
+       
+        <p class="border-r pr-2">8 mins</p>
+       
         <p class="text-primaryorange font-bold">Storytelling</p>
       </div>
 
