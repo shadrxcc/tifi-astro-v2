@@ -3,9 +3,10 @@ interface Props {
   title: string;
   desc: string;
   image: string;
+  cat: string
 }
 
-const { image, title, desc } = Astro.props;
+const { image, title, cat, desc } = Astro.props;
 ---
 
 <div class="font-sans">
@@ -18,7 +19,7 @@ const { image, title, desc } = Astro.props;
        
         <p class="border-r pr-2">8 mins</p>
        
-        <p class="text-primaryorange font-bold">Storytelling</p>
+        <p class="text-primaryorange font-bold">{cat}</p>
       </div>
 
       <p class="text-xl text-white font-bold">{title}</p>

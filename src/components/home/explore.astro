@@ -4,18 +4,21 @@ const exploredata = [
   {
     title: "The Art of Storytelling Through Video",
     image: './content-3.png',
+    cat: 'Storytelling',
     desc: `Discover how storytelling isn't just a technique but the heart of compelling video content. Learn how connecting with your audience's emotions can leave a lasting impact on them.`,
   },
 
   {
     title: "7 Essential Video Editing Techniques",
     image: './content-3.png',
+    cat: 'Tools',
     desc: `Discover how storytelling isn't just a technique but the heart of compelling video content. Learn how connecting with your audience's emotions can leave a lasting impact on them.`,
   },
 
   {
     title: "The Impact of Color Grading in Video Editing",
     image: './content-3.png',
+    cat: 'Travel',
     desc: `Discover how storytelling isn't just a technique but the heart of compelling video content. Learn how connecting with your audience's emotions can leave a lasting impact on them.`,
   },
 ];
@@ -35,7 +38,7 @@ const exploredata = [
 
   <div class="grid lg:grid-cols-3 gap-8">
     {exploredata.map((explore) => (
-        <Explorecard title={explore.title} desc={explore.desc} image={explore.image}/>
+        <Explorecard title={explore.title} cat={explore.cat} desc={explore.desc} image={explore.image}/>
     ))}
   </div>
 </section>
