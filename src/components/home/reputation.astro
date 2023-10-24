@@ -11,7 +11,7 @@ import ellipse from "../../assets/ellipse.svg";
   </div>
 
   <div
-    class="flex overflow-x-auto scroll-smooth gap-x-6"
+    class="flex overflow-x-auto hide-scrollbar scroll-smooth gap-x-6"
    
   >
     <div
@@ -137,4 +137,13 @@ import ellipse from "../../assets/ellipse.svg";
     background-size: cover;
     background-position: center;
   }
+
+  .hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 </style>
